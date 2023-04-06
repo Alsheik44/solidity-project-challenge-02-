@@ -1,0 +1,26 @@
+// SPDX-License-Identifier:MIT
+pragma solidity ^0.8.0;
+
+contract EthTounit {
+    uint public constant weiValue;
+    uint public constant gweiValue;
+    uint public constant etherValue;
+
+    receive() external payable {
+        weiValue = msg.value / 0.0.1 wei;
+        gweiValue = msg.value / 1 gwei;
+        etherValue = msg.value / 1 ether;
+    }
+
+    function getWeiValue() public view returns (uint) {
+        return weivalue;
+    }
+
+    function getGweiVlue() public view returns (uint) {
+        return gweivalue;
+    }
+
+    function getEtherValue() public view returns (uint) {
+        return ethervalue;
+    }
+}
